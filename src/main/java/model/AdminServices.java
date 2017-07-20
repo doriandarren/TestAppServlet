@@ -7,4 +7,5 @@ public interface AdminServices {
 	public Admin findAdmin(int id);
 	
 	public Set<Admin> findAllAdmin();
+	
 }

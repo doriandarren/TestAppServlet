@@ -5,7 +5,7 @@
          version="2.5">
   <servlet>
     <servlet-name>HelloAppEngine</servlet-name>
-    <servlet-class>HelloAppEngine</servlet-class>
+    <servlet-class>servlet.HelloAppEngine</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>HelloAppEngine</servlet-name>
@@ -19,12 +19,25 @@
   <!-- Server Nuestro -->
   <servlet>
     <servlet-name>testservlet</servlet-name>
-    <servlet-class>com.poo.testapp.server.TestServlet</servlet-class>
+    <servlet-class>servlet.TestServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
     <servlet-name>testservlet</servlet-name>
     <url-pattern>/testservlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <!-- Server Nuestro -->
+  <servlet>
+    <servlet-name>getadmins</servlet-name>
+    <servlet-class>servlet.GetAdmins</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>getadmins</servlet-name>
+    <url-pattern>/getadmins</url-pattern>
   </servlet-mapping>
   
   

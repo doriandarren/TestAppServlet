@@ -1,4 +1,4 @@
-package com.poo.testapp.server;
+package servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;

@@ -8,11 +8,12 @@ public class Admin {
 	
 	public Admin(int id, String name){
 		this.id=id;
-		
+		this.name=name;
 	}
 	
 	public Admin(){
-		
+		id=0;
+		name=null;
 	}
 	
 	public int getId() {
