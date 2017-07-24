@@ -2,29 +2,62 @@
      PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <title>Proyecto Engine</title>
-  </head>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
-  <body>
-    <h1>Proyecto Engine</h1>
-    <table>
-      <tr>
-        <td style="font-weight:bold;">Menu:</td>        
-      </tr>
-      <tr>
-        <td><a href="/">Inicio</a></td>
-      </tr>
-      <tr>
-        <td><a href="/hello">The servlet</a></td>
-      </tr>
-      <tr>
-        <td><a href="/form.html">Formulario</a></td>
-      </tr>
-      <tr>
-        <td><a href="/getadmins">Admins</a></td>
-      </tr>
-    </table>
+<title>Proyecto App Engine</title>
+
+<!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+	<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed"
+				data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+				aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="/">App Engine</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse"
+			id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li><a href="/">Home</a></li>	
+				<li><a href="/testservlet?test=1">Get</a></li>			
+				<li><a href="/form.html">Formulario</a></li>
+				<li><a href="/getadmins">Admins</a></li>
+				<li><a href="/calculator.html">Calculator</a></li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container-fluid --> </nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="jumbotron">
+			  <h1>Bienvenido a la Aplicación</h1>
+			  <p>Una App de información hecho y dispuesto para ti...</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<h1>Hola Bienvenido</h1>
+
+		</div>
+	</div>
+
+	<script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

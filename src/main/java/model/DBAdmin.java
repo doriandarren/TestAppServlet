@@ -13,7 +13,7 @@ public class DBAdmin implements AdminServices {
 	@Override
 	public Set<Admin> findAllAdmin() {
 		int size = (int) (Math.random()*100);
-		HashSet<Admin> list = new HashSet<>(size);
+		HashSet<Admin> list = new HashSet<Admin>(size);
 		
 		for(int i=0; i<size; i++)
 			list.add(getMockAdmin(i,"NoName" + i));		

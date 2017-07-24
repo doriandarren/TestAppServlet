@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import util.TemplatesHtml;
+
 @SuppressWarnings("serial")
 public class TestServlet extends HttpServlet{
 
@@ -17,84 +19,50 @@ public class TestServlet extends HttpServlet{
 response.setContentType("text/html");
 		
 		PrintWriter out = response.getWriter();
-		String title = "Display Current Date & Time";
+		String title = "Data";
 		
 		Date date = new Date();
 		
-		out.println(
-				"<html>\n"+
-				"<head><title>"				
-				+  title + "</head></title>" + 
-				"<body bgcolor=\"f0f0f0\">\n" 
-				+ "<table>"
-				+ "<tr> "
-				+ "<td colspan=\"2\" style=\"font-weight:bold;\">Menu:</td> "       
-				+ "</tr>"
-			    + "<tr>" 
-			    + "<td><a href=\" / \">Inicio</a></td>"
-			    + "</tr>"
-			    + "<tr>"
-			    + " <td><a href=\"/hello\">The servlet</a></td>"
-			    + "  </tr>"
-			    + "  <tr>"
-			    + "    <td><a href='/form.html'>Formulario</a></td>"
-			    + "  </tr>"
-			    + "</table>"
-			    +"<img src=\"entity-lifecycle.png\">" + 
-				"<h1 align=\" center \">"+ title +"</h1>" +	
+		out.println(TemplatesHtml.head(title)+	         
+            	TemplatesHtml.menu()+
+            	"<div class=\"container\">\r\n" + 
+				"		<div class=\"row\">"+
+			    "<img src=\"la-hora_.jpg\" class=\"img-responsive\">" + 
+				"<h1 align=\" center \">Display Current Date & Time</h1>" +	
 				"<h1 align=\" center \">"+ date +"</h1>" +	
-				"</body>" + 
-				"</html>"
-				);
-		System.out.print("Ejecutando");
+				"</div>\r\n" + 
+				"	</div>"+
+	               TemplatesHtml.footer()
+			);
+		
+		
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		// Set response content type
+	      
 	      response.setContentType("text/html");
-
 	      PrintWriter out = response.getWriter();
-	      String title = "Using GET Method to Read Form Data";
-	      String docType =
-	         "<!doctype html public \"-//w3c//dtd html 4.0 " +
-	         "transitional//en\">\n";
-	         
-	      out.println(docType +
-	         "<html>\n" +
-	            "<head><title>" + title + "</title></head>\n" +
-	            "<body bgcolor = \"#f0f0f0\">\n"            
-					+ "<table> "
-					+ "<tr>  "
-					+ "<td colspan=\"2\" style=\"font-weight:bold;\">Menu:</td> "       
-					+ "</tr>"
-					+ "<tr>" 
-					+ "<td><a href=\" / \">Inicio</a></td>"
-					+ "</tr>"
-					+ "<tr>"
-					+ " <td><a href=\"/hello\">The servlet</a></td>"
-					+ "  </tr>"
-					+ "  <tr>"
-					+ "    <td><a href='/form.html'>Formulario</a></td>"
-					+ "  </tr>"
-					+ "</table>"
-					+"<h1 align = \"center\">" + title + "</h1>\n" +
-	               "<ul>\n" +
-	                  "  <li><b>Nombre </b>: "
-	                  + request.getParameter("first_name") + "\n" +
+	      String title = "Result";
+	      
+	      out.println(TemplatesHtml.head(title)+	         
+	            	TemplatesHtml.menu()+
+	            	"<div class=\"container\">\r\n" + 
+					"		<div class=\"row\">"+
+					"<h1 align = \"center\">Metodo POST para leer Datos</h1>\n" +
+					"<h2>Hola Bienvenido: </h2>\n" +
+					"<h2>Tus Datos son: </h2>\n" +
+	                  "  <b>Nombre </b>: " + 
+					request.getParameter("first_name") + "\n" +
 	                  "  <li><b>Apellido </b>: "
 	                  + request.getParameter("last_name") + "\n" +
 	               "</ul>\n" +
-	            "</body>"+
-	         "</html>"
+	               "</div>\r\n" + 
+					"	</div>"+
+	               TemplatesHtml.footer()
 	      );
 		
 	}
-
-	
-	
-	
 	
 	
 }
