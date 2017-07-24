@@ -1,5 +1,8 @@
 # TestAppServlet
 
-Proyecto consta de modulos, de hora al usuario, formularios de servlet con metodo post.
+Proyecto consta:
+  * Modulos de hora al usuario.
+  * Formularios de servlet con metodo POST
+  * Formulario de servelet con metodo GET
 
 Proyecto OpenSource
